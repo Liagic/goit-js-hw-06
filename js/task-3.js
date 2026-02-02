@@ -8,13 +8,13 @@ class StringBuilder {
     return this.#value;
   }
   padEnd(str) {
-    this.#value += String(str).trim();
+    this.#value += str;
   }
   padStart(str) {
-    this.#value = String(str).trim() + this.#value;
+    this.#value = str + this.#value;
   }
   padBoth(str) {
-    this.#value = String(str).trim() + this.#value + String(str).trim();
+    this.#value = str + this.#value + str;
   }
 }
 const builder = new StringBuilder('.');
